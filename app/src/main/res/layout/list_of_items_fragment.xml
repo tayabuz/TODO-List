@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <variable
+            name="progress"
+            type="com.tayabuz.todolist.database.TODOItem.ProgressOfItem" />
+        <variable
+            name="hasItems"
+            type="boolean" />
+    </data>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/card_stack_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:overScrollMode="never"
+            tools:listitem="@layout/item"
+            android:visibility="@{hasItems ? View.VISIBLE : View.GONE}"/>
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/button_item_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:visibility="@{progress == com.tayabuz.todolist.database.TODOItem.ProgressOfItem.ToDo ? View.VISIBLE : View.GONE}"
+            app:srcCompat="@drawable/item_add_24dp" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

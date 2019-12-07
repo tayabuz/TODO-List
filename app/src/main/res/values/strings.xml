@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TODO List</string>
+    <string name="tab_header_todo">Нужно сделать</string>
+    <string name="tab_header_inprocess">В процессе</string>
+    <string name="tab_header_done">Завершено</string>
+    <string name="hint_explanation">Заголовок</string>
+    <string name="hint_definition">Описание</string>
+    <string name="button_add_ok">Сохранить</string>
+    <string name="button_add_cancel">Отмена</string>
+    <string name="menu_delete">Удалить</string>
+    <string name="menu_move_to_inprogress">Задание в процессе</string>
+    <string name="menu_move_to_done">Задание завершено</string>
+    <string name="menu_move_to_todo">Задание ещё не начато</string>
+    <string name="dialog_delete_item_header">Удалить этот элемент?</string>
+    <string name="dialog_delete_item_ok">Да</string>
+    <string name="dialog_delete_item_cancel">Нет</string>
+</resources>
