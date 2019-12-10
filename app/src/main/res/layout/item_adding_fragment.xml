@@ -1,49 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent" android:padding="15dp">
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_explanation"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/header_text"/>
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_definition"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="250dp"
-            android:id="@+id/explanation_text"/>
-    </com.google.android.material.textfield.TextInputLayout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:gravity="bottom"
-        android:layout_weight="1">
-        <Button
-            android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/add_cancel"
-            android:text="@string/button_add_cancel"
-            android:elevation="4dp"
-            android:background="@drawable/shadow_shape"
-            android:layout_marginEnd="10dp"/>
-        <Button
-            android:layout_width="0dp"
+            android:hint="@string/hint_explanation"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/header_text" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:id="@+id/add_ok"
-            android:text="@string/button_add_ok"
-            android:elevation="4dp"
-            android:background="@drawable/shadow_shape"/>
+            android:hint="@string/hint_definition"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:id="@+id/explanation_text" />
+        </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:gravity="bottom"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/add_cancel"
+                android:text="@string/button_add_cancel"
+                android:elevation="4dp"
+                android:background="@drawable/shadow_shape"
+                android:layout_marginEnd="10dp" />
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:id="@+id/add_ok"
+                android:text="@string/button_add_ok"
+                android:elevation="4dp"
+                android:background="@drawable/shadow_shape" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</layout>

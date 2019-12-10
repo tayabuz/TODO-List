@@ -11,10 +11,10 @@ import androidx.navigation.Navigation.findNavController
 import com.google.android.material.textfield.TextInputEditText
 import com.tayabuz.todolist.database.TODOItem
 import com.tayabuz.todolist.util.InjectUtil
+import com.tayabuz.todolist.util.KeyboardHelper
 import com.tayabuz.todolist.viewmodel.TODOItemsViewModel
 
 
-//TODO: при переходе назад, клавиатура остается в фокусе, нужно исправить
 class ItemAddingFragment: Fragment() {
     private val viewModel: TODOItemsViewModel by viewModels {
         InjectUtil.provideTODOItemsViewModelFactory(requireContext(), TODOItem.ProgressOfItem.ToDo)
@@ -27,6 +27,7 @@ class ItemAddingFragment: Fragment() {
 
         buttonCancel.setOnClickListener {
             val navController = findNavController(requireView())
+            KeyboardHelper.hideSoftKeyboard(this.activity!!, view)
             navController.popBackStack()
         }
         buttonOk.setOnClickListener {
@@ -34,6 +35,7 @@ class ItemAddingFragment: Fragment() {
             val explanation = view.findViewById<TextInputEditText>(R.id.explanation_text).text.toString()
             val todoItem = TODOItem(header, explanation, TODOItem.ProgressOfItem.ToDo)
             viewModel.insert(todoItem)
+            KeyboardHelper.hideSoftKeyboard(this.activity!!, view)
             val navController = findNavController(requireView())
             navController.popBackStack()
         }
